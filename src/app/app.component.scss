@@ -1,0 +1,28 @@
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+#main{
+max-width: 1404px;
+    margin: 0 auto;
+}
