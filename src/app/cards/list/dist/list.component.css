@@ -59,13 +59,12 @@ h1.heading {
 
 @supports (display: grid) {
   .gallery {
-
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 2rem;
   }
 
   .gallery,
-  .gallery-item {
+.gallery-item {
     margin: 0;
     justify-content: center;
   }

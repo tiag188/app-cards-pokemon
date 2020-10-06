@@ -11,7 +11,6 @@ import { ComponentsModule } from './components/components.module';
 import { SortPipe } from './pipes/sort.pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 
-
 @NgModule({
   declarations: [
     AppComponent

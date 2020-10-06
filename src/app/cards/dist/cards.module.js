@@ -16,12 +16,13 @@ var list_component_1 = require("./list/list.component");
 var list_service_1 = require("./list/services/list.service");
 var sort_pipe_1 = require("../pipes/sort.pipe");
 var ngx_filter_pipe_1 = require("ngx-filter-pipe");
+var details_component_1 = require("./details/details.component");
 var CardsModule = /** @class */ (function () {
     function CardsModule() {
     }
     CardsModule = __decorate([
         core_1.NgModule({
-            declarations: [list_component_1.ListComponent, list_component_1.ListComponent, sort_pipe_1.SortPipe],
+            declarations: [list_component_1.ListComponent, list_component_1.ListComponent, sort_pipe_1.SortPipe, details_component_1.DetailsComponent],
             exports: [list_component_1.ListComponent],
             imports: [
                 common_1.CommonModule,

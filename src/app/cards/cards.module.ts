@@ -8,9 +8,10 @@ import { ListComponent } from './list/list.component';
 import { ListService } from './list/services/list.service';
 import { SortPipe } from '../pipes/sort.pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
-  declarations: [ListComponent, ListComponent, SortPipe],
+  declarations: [ListComponent, ListComponent, SortPipe, DetailsComponent],
   exports:[ListComponent],
   imports: [
     CommonModule,
