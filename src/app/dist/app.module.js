@@ -17,6 +17,7 @@ var cards_module_1 = require("./cards/cards.module");
 var components_module_1 = require("./components/components.module");
 var sort_pipe_1 = require("./pipes/sort.pipe");
 var ngx_filter_pipe_1 = require("ngx-filter-pipe");
+var ngx_spinner_1 = require("ngx-spinner");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -32,10 +33,12 @@ var AppModule = /** @class */ (function () {
                 http_1.HttpClientModule,
                 cards_module_1.CardsModule,
                 components_module_1.ComponentsModule,
-                ngx_filter_pipe_1.FilterPipeModule
+                ngx_filter_pipe_1.FilterPipeModule,
+                ngx_spinner_1.NgxSpinnerModule
             ],
             providers: [http_1.HttpClient, sort_pipe_1.SortPipe],
-            bootstrap: [app_component_1.AppComponent]
+            bootstrap: [app_component_1.AppComponent],
+            schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
         })
     ], AppModule);
     return AppModule;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListModel } from './models/list.model';
 import { ListService } from './services/list.service';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-list',
@@ -12,9 +13,13 @@ export class ListComponent implements OnInit {
   listCard: ListModel;
   error: any;
 
-  constructor(private detailService: ListService) { }
+  constructor(private detailService: ListService, private spinner: NgxSpinnerService) { 
+   
+
+  }
 
   ngOnInit(): void {
+    this.spinner.show();
     this.getCards();
   }
 
@@ -25,6 +30,7 @@ export class ListComponent implements OnInit {
   public getCards() {
     this.detailService.getCards().subscribe((data: any) => {
       this.listCard = data.cards;
+      this.spinner.hide();
       console.log("Pokémons Array: ", data.cards);
     }, (error: any) => {
       this.error = error;

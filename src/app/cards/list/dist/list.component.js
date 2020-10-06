@@ -9,11 +9,13 @@ exports.__esModule = true;
 exports.ListComponent = void 0;
 var core_1 = require("@angular/core");
 var ListComponent = /** @class */ (function () {
-    function ListComponent(detailService) {
+    function ListComponent(detailService, spinner) {
         this.detailService = detailService;
+        this.spinner = spinner;
         this.listCardFilter = { name: '' };
     }
     ListComponent.prototype.ngOnInit = function () {
+        this.spinner.show();
         this.getCards();
     };
     ListComponent.prototype.ngOnDestroy = function () {
@@ -23,6 +25,7 @@ var ListComponent = /** @class */ (function () {
         var _this = this;
         this.detailService.getCards().subscribe(function (data) {
             _this.listCard = data.cards;
+            _this.spinner.hide();
             console.log("Pokémons Array: ", data.cards);
         }, function (error) {
             _this.error = error;

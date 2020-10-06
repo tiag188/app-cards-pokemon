@@ -29,6 +29,7 @@
     "ngx-order-pipe": "^2.1.0",
     "ngx-pipes": "^2.7.5",
     "ngx-sortable": "^1.0.3",
+    "ngx-spinner": "^10.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
