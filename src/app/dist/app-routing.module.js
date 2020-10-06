@@ -12,9 +12,9 @@ var router_1 = require("@angular/router");
 var details_component_1 = require("./cards/details/details.component");
 var list_component_1 = require("./cards/list/list.component");
 var routes = [
-    { path: "**", component: list_component_1.ListComponent },
+    { path: '', redirectTo: '/cards', pathMatch: 'full' },
     { path: "cards", component: list_component_1.ListComponent },
-    { path: "details", component: details_component_1.DetailsComponent }
+    { path: "details/:id", component: details_component_1.DetailsComponent }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

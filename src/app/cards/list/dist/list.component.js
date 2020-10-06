@@ -9,8 +9,8 @@ exports.__esModule = true;
 exports.ListComponent = void 0;
 var core_1 = require("@angular/core");
 var ListComponent = /** @class */ (function () {
-    function ListComponent(detailService, spinner) {
-        this.detailService = detailService;
+    function ListComponent(listService, spinner) {
+        this.listService = listService;
         this.spinner = spinner;
         this.listCardFilter = { name: '' };
     }
@@ -23,13 +23,11 @@ var ListComponent = /** @class */ (function () {
     };
     ListComponent.prototype.getCards = function () {
         var _this = this;
-        this.detailService.getCards().subscribe(function (data) {
+        this.listService.getCards().subscribe(function (data) {
             _this.listCard = data.cards;
             _this.spinner.hide();
-            console.log("Pokémons Array: ", data.cards);
         }, function (error) {
             _this.error = error;
-            console.error("Errors: ", error);
         });
     };
     ListComponent = __decorate([

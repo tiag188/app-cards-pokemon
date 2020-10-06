@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.ListService = void 0;
+exports.DetailsService = void 0;
 var core_1 = require("@angular/core");
 var rxjs_1 = require("rxjs");
 var http_1 = require("@angular/common/http");
@@ -15,33 +15,29 @@ var environment_1 = require("src/environments/environment");
 var httpOptions = {
     headers: new http_1.HttpHeaders({ 'Content-Type': 'application/json' })
 };
-var ListService = /** @class */ (function () {
-    function ListService(http) {
+var DetailsService = /** @class */ (function () {
+    function DetailsService(http) {
         this.http = http;
         this.env = environment_1.environment.apiUrl;
         console.log("Service Construtor Cards Pokemon OK");
     }
-    ListService.prototype.getCards = function () {
-        var _this = this;
-        var endpoint = "?supertype=pokemon&pageSize=1000";
-        return this.http
-            .get(this.env + endpoint)
-            .pipe(operators_1.tap(function (_) {
-            return console.log("read the cards pok\u00E9mon id = " + (_this.env + endpoint));
-        }), operators_1.catchError(this.handleError("getCards id=" + (this.env + endpoint))));
+    DetailsService.prototype.getCard = function (id) {
+        var url = environment_1.environment.apiUrl + "/" + id;
+        console.log(url);
+        return this.http.get(url).pipe(operators_1.tap(function (_) { return console.log("read the card id = " + id); }), operators_1.catchError(this.handleError("getCard id=" + id)));
     };
-    ListService.prototype.handleError = function (operation, result) {
+    DetailsService.prototype.handleError = function (operation, result) {
         if (operation === void 0) { operation = 'operation'; }
         return function (error) {
             console.error(error);
             return rxjs_1.of(result);
         };
     };
-    ListService = __decorate([
+    DetailsService = __decorate([
         core_1.Injectable({
             providedIn: 'root'
         })
-    ], ListService);
-    return ListService;
+    ], DetailsService);
+    return DetailsService;
 }());
-exports.ListService = ListService;
+exports.DetailsService = DetailsService;

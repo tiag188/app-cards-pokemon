@@ -14,22 +14,26 @@
         </div>
         <hr>
         <div class="row gallery">
+            <ngx-spinner bdColor="rgba(244, 244, 244, .9)">
                 <img src='https://guess-that-pokemon.herokuapp.com/assets/images/loading.gif' />
-
-                
             </ngx-spinner>
             <mat-card class="col-lg-2" *ngFor="let value of listCard  | filterBy: listCardFilter | sort:'name' ">
-                <div>
-                    <h4>
-                        <b>ID:</b> {{value?.id}} <br />
-                        <b>Nome:</b> {{value?.name }} <br />
-                        <b *ngIf="value.types">Tipo: </b> <span *ngFor="let value2 of value?.types">{{value2}}</span>
-                        <b *ngIf="!value.types">Carta Especial</b>
-                    </h4>
-                </div>
-                <div class="gallery-item ">
-                    <img class="gallery-image" [attr.src]="value.imageUrl">
-                </div>
+                <a [routerLink]="['/details', value.id]">
+                    <div>
+                        <h4>
+
+                            <b>ID:</b> {{value?.id}} <br />
+                            <b>Nome:</b> {{value?.name }} <br />
+                            <b *ngIf="value.types">Tipo: </b> <span
+                                *ngFor="let value2 of value?.types">{{value2}}</span>
+                            <b *ngIf="!value.types">Carta Especial</b>
+
+                        </h4>
+                    </div>
+                    <div class="gallery-item ">
+                        <img class="gallery-image" [attr.src]="value.imageUrl">
+                    </div>
+                </a>
             </mat-card>
         </div>
     </div>

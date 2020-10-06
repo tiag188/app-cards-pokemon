@@ -3,9 +3,8 @@ import { Observable, of, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
 
-
-import { ListModel } from '../models/list.model';
 import { environment } from 'src/environments/environment';
+
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -14,20 +13,19 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class ListService {
+export class DetailsService {
   env = environment.apiUrl;
   constructor(private http: HttpClient) {
     console.log("Service Construtor Cards Pokemon OK");
   }
 
-  public getCards(): Observable<ListModel> {
-    let endpoint = "?supertype=pokemon&pageSize=1000";
-    return this.http
-      .get<ListModel>(this.env + endpoint)
-      .pipe(tap(_ =>
-        console.log(`read the cards pokémon id = ${this.env + endpoint}`)),
-        catchError(this.handleError<any>(`getCards id=${this.env + endpoint}`))
-      );
+  getCard(id: string): Observable<any> {
+    const url = `${environment.apiUrl}/${id}`;
+    console.log(url);
+    return this.http.get<any>(url).pipe(
+      tap(_ => console.log(`read the card id = ${id}`)),
+      catchError(this.handleError<any>(`getCard id=${id}`))
+    );
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

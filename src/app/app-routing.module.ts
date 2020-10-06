@@ -4,9 +4,9 @@ import { DetailsComponent } from './cards/details/details.component';
 import { ListComponent } from './cards/list/list.component';
 
 const routes: Routes = [
-  { path: "**", component: ListComponent },
+  { path: '', redirectTo: '/cards', pathMatch: 'full' },
   { path: "cards", component: ListComponent },
-  { path: "details", component: DetailsComponent}
+  { path: "details/:id", component: DetailsComponent}
 ];
 
 @NgModule({

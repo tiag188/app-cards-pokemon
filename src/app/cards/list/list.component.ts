@@ -13,9 +13,8 @@ export class ListComponent implements OnInit {
   listCard: ListModel;
   error: any;
 
-  constructor(private detailService: ListService, private spinner: NgxSpinnerService) { 
+  constructor(private listService: ListService, private spinner: NgxSpinnerService) { 
    
-
   }
 
   ngOnInit(): void {
@@ -28,13 +27,11 @@ export class ListComponent implements OnInit {
   }
 
   public getCards() {
-    this.detailService.getCards().subscribe((data: any) => {
+    this.listService.getCards().subscribe((data: any) => {
       this.listCard = data.cards;
-      this.spinner.hide();
-      console.log("Pokémons Array: ", data.cards);
+      this.spinner.hide()
     }, (error: any) => {
       this.error = error;
-      console.error("Errors: ", error);
     });
   }
 
