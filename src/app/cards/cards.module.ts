@@ -10,6 +10,7 @@ import { SortPipe } from '../pipes/sort.pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { DetailsComponent } from './details/details.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [ListComponent, ListComponent, SortPipe, DetailsComponent],
@@ -20,7 +21,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     FilterPipeModule,
     MatCardModule,
     MatGridListModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    ComponentsModule
   ],
   providers:[
     ListService

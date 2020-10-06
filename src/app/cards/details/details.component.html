@@ -1,5 +1,43 @@
-<p>Account ID: {{ id }}</p>
 
+<section class="wrap-3d">
+    <div class="item-3d">
+        <span class="ground"></span>
+        <figure class="item-content group">
+            <div class="item-img">
+                
+                <img src="{{this.imagem}}" alt="" style="opacity:0;">
+                <img src="../../assets/images/card-pokemon.PNG"/>
+
+                <ngx-spinner bdColor="rgba(244, 244, 244, .9)">
+                    <img src='../../assets/images/loading.gif' />
+                </ngx-spinner>
+            </div>
+            <figcaption class="item-caption">
+                <p>
+                    <b>Nome: </b>{{this.name}}<br>
+                    <b>ID do Pokémon: </b>{{this.id}}<br>
+                    <b>Tipo: </b>{{this.type}}<br>
+                </p>
+                <p>
+                    <b>Lista de ataques </b><br>
+                </p>
+                <ul *ngFor="let value of this.attack">
+                    <li><b>Nome: </b>{{value.name}}</li>
+                    <li><b>Custo de “mana”:</b> {{value.convertedEnergyCost}}</li>
+                    <li><b>Dano: </b>{{value.damage}}</li>
+                    <li><b>Descrição: </b>{{value.text}}<br><br></li>
+                </ul>
+                <p>
+                    <b>Resistencia(s): </b><br>
+                    <b>Fraqueza(s): </b>
+                </p>
+                <p><br>
+                    <a  mat-raised-button color="primary">Primary</a>
+                </p>
+            </figcaption>
+        </figure>
+    </div>
+</section>
 <pre>
     {{this.card | json}}
 </pre>

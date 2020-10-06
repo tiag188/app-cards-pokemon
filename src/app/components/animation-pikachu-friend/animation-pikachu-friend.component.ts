@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-animation-pikachu-friend',
+  selector: 'animation-pikachu',
   templateUrl: './animation-pikachu-friend.component.html',
   styleUrls: ['./animation-pikachu-friend.component.scss']
 })
-export class AnimationPikachuFriendComponent implements OnInit {
+export class AnimationPikachuComponent implements OnInit {
 
   constructor() { }
 

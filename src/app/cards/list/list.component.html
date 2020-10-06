@@ -1,9 +1,9 @@
+<animation-pikachu></animation-pikachu>
 <div id="main">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <h2>Angular 10.1.4 | Tíäg Silvä: <a href="https://tiag.com.br" target="_blank">tiag.com.br</a></h2>
-                <h1 class="heading"><a href="https://pokemontcg.io/" target="_blank">Pokémon TCG API</a></h1>
             </div>
         </div>
         <div class="row">
@@ -15,7 +15,7 @@
         <hr>
         <div class="row gallery">
             <ngx-spinner bdColor="rgba(244, 244, 244, .9)">
-                <img src='https://guess-that-pokemon.herokuapp.com/assets/images/loading.gif' />
+                <img src='../../assets/images/loading.gif' />
             </ngx-spinner>
             <mat-card class="col-lg-2" *ngFor="let value of listCard  | filterBy: listCardFilter | sort:'name' ">
                 <a [routerLink]="['/details', value.id]" (click)="gotoCardDetails('/details',value.id)" routerLinkActive="active">

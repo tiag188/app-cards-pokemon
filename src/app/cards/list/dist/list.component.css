@@ -9,6 +9,8 @@ h4 {
   text-align: center;
   padding: 3.5rem 0;
   color: #1a1a1a;
+  padding-bottom: 225px;
+  padding-top: 135px;
 }
 
 .gallery-item {
@@ -18,11 +20,6 @@ h4 {
 .gallery-item:hover {
   border: 4px solid #444;
   transition: border 0.4s linear;
-}
-
-h1.heading {
-  padding-bottom: 225px;
-  padding-top: 135px;
 }
 
 .heading span {

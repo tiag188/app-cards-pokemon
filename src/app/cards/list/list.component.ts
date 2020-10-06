@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ListModel } from './models/list.model';
 import { ListService } from './services/list.service';
 import { NgxSpinnerService } from "ngx-spinner";
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -13,10 +13,9 @@ export class ListComponent implements OnInit {
   listCardFilter: any = { name: '' };
   listCard: ListModel;
   error: any;
+  name: any;
 
-  constructor(private router: Router, private route: ActivatedRoute, private listService: ListService, private spinner: NgxSpinnerService) {
-
-  }
+  constructor(private router: Router, private route: ActivatedRoute, private listService: ListService, private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
     this.spinner.show();
@@ -25,6 +24,7 @@ export class ListComponent implements OnInit {
 
   ngOnDestroy(): void {
     this.getCards();
+    this.spinner;
   }
 
   public getCards() {
@@ -45,5 +45,6 @@ export class ListComponent implements OnInit {
       }
     });
   }
+
 
 }

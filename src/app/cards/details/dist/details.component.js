@@ -21,13 +21,20 @@ var DetailsComponent = /** @class */ (function () {
             _this.getCard(params.get('id'));
         });
     };
+    DetailsComponent.prototype.ngOnDestroy = function () {
+        this.getCard(this.id);
+    };
     DetailsComponent.prototype.getCard = function (id) {
         var _this = this;
         this.id = id;
         this.detailService.getCard(id).subscribe(function (data) {
             _this.card = data.card;
-            console.log("DAta:" + data);
-            console.log("CARD:" + _this.card);
+            _this.imagem = data.card.imageUrlHiRes;
+            _this.name = data.card.name;
+            _this.type = data.card.types;
+            _this.attack = data.card.attacks;
+            _this.resistance = data.card.resistances;
+            _this.weakness = data.card.weaknesses;
             _this.spinner.hide();
         }, function (error) {
             _this.error = error;

@@ -15,8 +15,8 @@ var ComponentsModule = /** @class */ (function () {
     }
     ComponentsModule = __decorate([
         core_1.NgModule({
-            declarations: [animation_pikachu_friend_component_1.AnimationPikachuFriendComponent],
-            exports: [animation_pikachu_friend_component_1.AnimationPikachuFriendComponent],
+            declarations: [animation_pikachu_friend_component_1.AnimationPikachuComponent],
+            exports: [animation_pikachu_friend_component_1.AnimationPikachuComponent],
             imports: [
                 common_1.CommonModule
             ]

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AnimationPikachuFriendComponent } from './animation-pikachu-friend/animation-pikachu-friend.component';
+import { AnimationPikachuComponent } from './animation-pikachu-friend/animation-pikachu-friend.component';
 
 @NgModule({
-  declarations: [AnimationPikachuFriendComponent],
-  exports: [AnimationPikachuFriendComponent],
+  declarations: [AnimationPikachuComponent],
+  exports: [AnimationPikachuComponent],
   imports: [
     CommonModule
   ]

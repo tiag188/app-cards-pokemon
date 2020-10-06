@@ -22,6 +22,7 @@ var ListComponent = /** @class */ (function () {
     };
     ListComponent.prototype.ngOnDestroy = function () {
         this.getCards();
+        this.spinner;
     };
     ListComponent.prototype.getCards = function () {
         var _this = this;

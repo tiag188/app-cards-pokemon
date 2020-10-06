@@ -105,6 +105,18 @@ li {
   top: 0%;
   overflow: hidden;
 }
+.heading {
+  font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    padding: 3.5rem 0;
+    color: #1a1a1a;
+    padding-bottom: 202px;
+    padding-top: 180px;
+    z-index: 9;
+    position: relative;
+}
 
 .mountain-range {
   position: absolute;
