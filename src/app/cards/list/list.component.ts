@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ListModel } from './models/list.model';
 import { ListService } from './services/list.service';
 import { NgxSpinnerService } from "ngx-spinner";
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -13,8 +14,8 @@ export class ListComponent implements OnInit {
   listCard: ListModel;
   error: any;
 
-  constructor(private listService: ListService, private spinner: NgxSpinnerService) { 
-   
+  constructor(private router: Router, private route: ActivatedRoute, private listService: ListService, private spinner: NgxSpinnerService) {
+
   }
 
   ngOnInit(): void {
@@ -32,6 +33,16 @@ export class ListComponent implements OnInit {
       this.spinner.hide()
     }, (error: any) => {
       this.error = error;
+    });
+  }
+
+  public gotoCardDetails(url: string, id: string) {
+    this.router.navigate([url, id]).then((e) => {
+      if (e) {
+        console.log("Navigation is successful!" + e);
+      } else {
+        console.log("Navigation has failed!" + e);
+      }
     });
   }
 

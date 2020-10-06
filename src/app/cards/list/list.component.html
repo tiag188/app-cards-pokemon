@@ -18,7 +18,7 @@
                 <img src='https://guess-that-pokemon.herokuapp.com/assets/images/loading.gif' />
             </ngx-spinner>
             <mat-card class="col-lg-2" *ngFor="let value of listCard  | filterBy: listCardFilter | sort:'name' ">
-                <a [routerLink]="['/details', value.id]">
+                <a [routerLink]="['/details', value.id]" (click)="gotoCardDetails('/details',value.id)" routerLinkActive="active">
                     <div>
                         <h4>
 

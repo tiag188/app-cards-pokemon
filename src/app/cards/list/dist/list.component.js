@@ -9,7 +9,9 @@ exports.__esModule = true;
 exports.ListComponent = void 0;
 var core_1 = require("@angular/core");
 var ListComponent = /** @class */ (function () {
-    function ListComponent(listService, spinner) {
+    function ListComponent(router, route, listService, spinner) {
+        this.router = router;
+        this.route = route;
         this.listService = listService;
         this.spinner = spinner;
         this.listCardFilter = { name: '' };
@@ -28,6 +30,16 @@ var ListComponent = /** @class */ (function () {
             _this.spinner.hide();
         }, function (error) {
             _this.error = error;
+        });
+    };
+    ListComponent.prototype.gotoCardDetails = function (url, id) {
+        this.router.navigate([url, id]).then(function (e) {
+            if (e) {
+                console.log("Navigation is successful!" + e);
+            }
+            else {
+                console.log("Navigation has failed!" + e);
+            }
         });
     };
     ListComponent = __decorate([
