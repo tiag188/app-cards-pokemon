@@ -9,12 +9,7 @@ exports.__esModule = true;
 exports.AppModule = void 0;
 var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
-simport;
-{
-    HttpClient, HttpClientModule;
-}
-from;
-'@angular/common/http';
+var http_1 = require("@angular/common/http");
 var animations_1 = require("@angular/platform-browser/animations");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
@@ -34,12 +29,12 @@ var AppModule = /** @class */ (function () {
                 platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule,
                 animations_1.BrowserAnimationsModule,
-                HttpClientModule,
+                http_1.HttpClientModule,
                 cards_module_1.CardsModule,
                 components_module_1.ComponentsModule,
                 ngx_filter_pipe_1.FilterPipeModule
             ],
-            providers: [HttpClient, sort_pipe_1.SortPipe],
+            providers: [http_1.HttpClient, sort_pipe_1.SortPipe],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
