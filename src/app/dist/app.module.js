@@ -9,7 +9,12 @@ exports.__esModule = true;
 exports.AppModule = void 0;
 var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
-var http_1 = require("@angular/common/http");
+simport;
+{
+    HttpClient, HttpClientModule;
+}
+from;
+'@angular/common/http';
 var animations_1 = require("@angular/platform-browser/animations");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
@@ -17,7 +22,6 @@ var cards_module_1 = require("./cards/cards.module");
 var components_module_1 = require("./components/components.module");
 var sort_pipe_1 = require("./pipes/sort.pipe");
 var ngx_filter_pipe_1 = require("ngx-filter-pipe");
-var ngx_spinner_1 = require("ngx-spinner");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -30,15 +34,13 @@ var AppModule = /** @class */ (function () {
                 platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule,
                 animations_1.BrowserAnimationsModule,
-                http_1.HttpClientModule,
+                HttpClientModule,
                 cards_module_1.CardsModule,
                 components_module_1.ComponentsModule,
-                ngx_filter_pipe_1.FilterPipeModule,
-                ngx_spinner_1.NgxSpinnerModule
+                ngx_filter_pipe_1.FilterPipeModule
             ],
-            providers: [http_1.HttpClient, sort_pipe_1.SortPipe],
-            bootstrap: [app_component_1.AppComponent],
-            schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
+            providers: [HttpClient, sort_pipe_1.SortPipe],
+            bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
     return AppModule;

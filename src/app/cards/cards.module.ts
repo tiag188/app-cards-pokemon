@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
@@ -9,6 +9,7 @@ import { ListService } from './list/services/list.service';
 import { SortPipe } from '../pipes/sort.pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { DetailsComponent } from './details/details.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [ListComponent, ListComponent, SortPipe, DetailsComponent],
@@ -18,10 +19,12 @@ import { DetailsComponent } from './details/details.component';
     FormsModule,
     FilterPipeModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    NgxSpinnerModule
   ],
   providers:[
     ListService
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CardsModule { }

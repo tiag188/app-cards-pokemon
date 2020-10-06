@@ -17,6 +17,7 @@ var list_service_1 = require("./list/services/list.service");
 var sort_pipe_1 = require("../pipes/sort.pipe");
 var ngx_filter_pipe_1 = require("ngx-filter-pipe");
 var details_component_1 = require("./details/details.component");
+var ngx_spinner_1 = require("ngx-spinner");
 var CardsModule = /** @class */ (function () {
     function CardsModule() {
     }
@@ -29,11 +30,13 @@ var CardsModule = /** @class */ (function () {
                 forms_1.FormsModule,
                 ngx_filter_pipe_1.FilterPipeModule,
                 card_1.MatCardModule,
-                grid_list_1.MatGridListModule
+                grid_list_1.MatGridListModule,
+                ngx_spinner_1.NgxSpinnerModule
             ],
             providers: [
                 list_service_1.ListService
-            ]
+            ],
+            schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
         })
     ], CardsModule);
     return CardsModule;

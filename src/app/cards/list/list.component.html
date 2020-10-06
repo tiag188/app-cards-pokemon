@@ -1,5 +1,4 @@
 <div id="main">
-
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -15,6 +14,9 @@
         </div>
         <hr>
         <div class="row gallery">
+            <ngx-spinner bdColor="rgb(247, 247, 249)">
+                <img src='https://i.pinimg.com/originals/72/00/28/720028e1fce6412e77667993ead54ede.gif' />"
+            </ngx-spinner>
             <mat-card class="col-lg-2" *ngFor="let value of listCard  | filterBy: listCardFilter | sort:'name' ">
                 <div>
                     <h4>
