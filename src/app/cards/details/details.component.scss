@@ -27,6 +27,10 @@ $wide-m:600px;
   }
 }
 
+@mixin border-cards {
+  border-radius: 19px;
+}
+
 @mixin transition-opacity {
   transition: opacity 0.25s;
   -webkit-transtion: opacity 0.25s;
@@ -268,6 +272,7 @@ strong {
   img:nth-child(2) {
     max-height: 549px;
     max-width: 400px;
+    @include border-cards();
   }
 }
 
@@ -496,6 +501,9 @@ body {
 }
 
 
+li {
+  text-align: left;
+}
 
 .clash-card {
   background: white;
@@ -618,8 +626,6 @@ body {
   z-index: 999;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
-
 $border-radius-size: 14px;
 $pokemon: #EC9B3B;
 $archer: #EE5487;
@@ -689,6 +695,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0px 4px 4px 2px #00000040;
+    @include border-cards();
   }
 }
 
@@ -703,19 +710,22 @@ body {
 .clash-card__level--pokemon {
   color: $pokemon;
 }
-p.jc-center a{
-  color:white;
+
+p.jc-center a {
+  color: white;
 }
-p.jc-center{
-justify-content: center;
-    display: flex;
-    margin-top: 45px;
+
+p.jc-center {
+  justify-content: center;
+  display: flex;
+  margin-top: 45px;
 
 }
 
 .clearfix {
   clear: both;
 }
+
 .clash-card__unit-name {
   font-size: 26px;
   color: black;
@@ -790,4 +800,14 @@ justify-content: center;
 .slick-next {
   right: 100px;
   z-index: 999;
+}
+
+sup {
+
+  background: white;
+  padding: 13px 6px;
+  margin-top: -2px;
+  border-radius: 18px;
+  color: black;
+  height: 26px;
 }

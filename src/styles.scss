@@ -23,8 +23,12 @@ body {
 
   li {
     list-style: none;
-  }
 
+  }
+  .center{
+    display: flex;
+    justify-content: center;
+    }
   b {
     @include font-default();
   }
