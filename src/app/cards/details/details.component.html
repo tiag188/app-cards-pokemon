@@ -4,7 +4,7 @@
         <figure class="item-content group">
             <div class="item-img">
                 <img src="{{this.imageUrlHi}}" alt="" style="opacity:0;">
-                <div class="pokedex-loading"></div>
+                <div class="pokedex-loading">Aguarde... carregando imagem em alta definição</div>
                 <img src="../../assets/images/card-pokemon.PNG" />
                 <p class="jc-center"><br>
                     <a  class="btn btn-dark" >Voltar</a>
@@ -23,7 +23,8 @@
                             <div class="clash-card__level clash-card__level--pokemon">{{this.type}}</div>
                             <div class="clash-card__unit-name">{{this.name}}</div>
                             <span>ID: {{this.id}}</span>
-                            <div class="clash-card__unit-description">
+                            <span *ngIf="!this.attacks"><hr><b>N/A Ataques</b><hr><br></span>
+                            <div *ngIf="this.attacks" class="clash-card__unit-description">
                                 <span><hr><b>Ataque(s)</b><hr><br></span>
                                 <ul *ngFor="let attack of this.attacks">
                                     

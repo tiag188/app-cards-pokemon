@@ -28,7 +28,7 @@ $wide-m:600px;
 }
 
 @mixin border-cards {
-  border-radius: 19px;
+  border-radius: 25px;
 }
 
 @mixin transition-opacity {
@@ -46,7 +46,7 @@ $wide-m:600px;
 // =========================
 // max-width for centered boxes
 // =========================
-$mx-width: 50rem;
+$mx-width: 65rem;
 
 
 
@@ -261,6 +261,7 @@ strong {
     transform-origin: 50% 100%;
     transform: translateZ(0rem);
     @include transition-opacity();
+    @include border-cards();
   }
 
   img:first-child {
@@ -727,17 +728,21 @@ p.jc-center {
 }
 .pokedex-loading{
   width: 130px;
-  height: 102px;
-  background-position: center;
-  background-image: url(https://thumbs.gfycat.com/WeakSparseDromedary-small.gif);
-  background-size: 152px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  border: 1px solid black;
-  box-shadow: 0px 0px 7px 3px #1b1b1b;
+    height: 102px;
+    background-position: center;
+    background-image: url(https://thumbs.gfycat.com/WeakSparseDromedary-small.gif);
+    background-size: 152px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border: 1px solid black;
+    box-shadow: 0px 0px 7px 3px #1b1b1b;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+    text-shadow: 1px 1px 2px #000000;
 }
 .clash-card__unit-name {
   font-size: 26px;
