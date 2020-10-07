@@ -163,6 +163,8 @@ strong {
   z-index: 9;
   position: absolute;
   opacity: 1 !important;
+  width: 530px;
+  top: -3px;
 }
 .item-img img:nth-child(2) {
   max-height: 549px;
