@@ -30,7 +30,8 @@ var DetailsComponent = /** @class */ (function () {
         this.id = id;
         this.detailService.getCard(id).subscribe(function (data) {
             _this.card = data.card;
-            _this.imagem = data.card.imageUrlHiRes;
+            _this.imageUrlHi = data.card.imageUrlHiRes;
+            _this.imageUrl = data.card.imageUrl;
             _this.name = data.card.name;
             _this.type = data.card.types;
             _this.attacks = data.card.attacks;

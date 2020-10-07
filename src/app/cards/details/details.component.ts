@@ -10,7 +10,8 @@ import { DetailsService } from './details.service';
 })
 export class DetailsComponent implements OnInit {
   id: string;
-  imagem: string;
+  imageUrlHi: string;
+  imageUrl: string;
   name: string;
   type: string[];
   attacks: string[];
@@ -36,7 +37,8 @@ export class DetailsComponent implements OnInit {
     this.id = id;
     this.detailService.getCard(id).subscribe((data: any) => {
       this.card = data.card;
-      this.imagem = data.card.imageUrlHiRes;
+      this.imageUrlHi = data.card.imageUrlHiRes;
+      this.imageUrl = data.card.imageUrl;
       this.name = data.card.name;
       this.type = data.card.types;
       this.attacks = data.card.attacks;

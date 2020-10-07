@@ -1,42 +1,69 @@
-
 <section class="wrap-3d">
     <div class="item-3d">
         <span class="ground"></span>
         <figure class="item-content group">
             <div class="item-img">
-                
-                <img src="{{this.imagem}}" alt="" style="opacity:0;">
-                <img src="../../assets/images/card-pokemon.PNG"/>
 
-                <ngx-spinner bdColor="rgba(244, 244, 244, .9)">
+                <img src="{{this.imageUrlHi}}" alt="" style="opacity:0;">
+                <img src="../../assets/images/card-pokemon.PNG" />
+                <p class="jc-center"><br>
+                    <a  class="btn btn-dark" >Voltar</a>
+                </p>
+                <!-- <ngx-spinner bdColor="rgba(244, 244, 244, .9)">
                     <img src='../../assets/images/loading.gif' />
-                </ngx-spinner>
+                </ngx-spinner> -->
             </div>
             <figcaption class="item-caption">
-                <p>
-                    <b>Nome: </b>{{this.name}}<br>
-                    <b>ID do Pokémon: </b>{{this.id}}<br>
-                    <b>Tipo: </b>{{this.type}}<br>
-                </p>
-                <span>
-                    <b>Lista de ataques </b><br>
-                </span>
-                <ul *ngFor="let value of this.attacks">
-                    <li><b>Nome: </b>{{value.name}}</li>
-                    <li><b>Custo de “mana”:</b> {{value.convertedEnergyCost}}</li>
-                    <li><b>Dano: </b>{{value.damage}}</li>
-                    <li><b>Descrição: </b>{{value.text}}<br><br></li>
-                </ul>
-                
-                
-                <p>
-                    <b>Resistencia(s): </b> <span *ngFor="let resistence of this.resistance">{{resistence.type}}</span><br>
-                    <b>Fraqueza(s): </b>
-                </p>
-                <p><br>
-                    <a  mat-raised-button color="primary">Primary</a>
-                </p>
+            
+                <div class="slide-container">
+
+                    <div class="wrapper">
+                        <div class="clash-card pokemon">
+                            <div class="clash-card__image clash-card__image--pokemon">
+                                <img src="{{this.imageUrl}}" alt="pokemon" />
+                            </div>
+                            <div class="clash-card__level clash-card__level--pokemon">{{this.type}}</div>
+                            <div class="clash-card__unit-name">{{this.name}}</div>
+                            <span>ID: {{this.id}}</span>
+                            <div class="clash-card__unit-description">
+                                <span>
+                                    <hr>
+                                    <b>Ataque(s)</b><br>
+
+                                </span>
+                                <ul *ngFor="let value of this.attacks">
+                                    <li><b>Nome: </b>{{value.name}}</li>
+                                    <li><b>Custo de “mana”:</b> {{value.convertedEnergyCost}}</li>
+                                    <li><b>Dano: </b>{{value.damage}}</li>
+                                    <li><b>Descrição: </b>{{value.text}}<br><br></li>
+                                </ul>
+                                <hr>
+                            </div>
+
+                            <div class="clash-card__unit-stats clash-card__unit-stats--pokemon clearfix">
+                                <div>Resistencia:</div>
+                                <div *ngFor="let resistence of this.resistance">
+                                    <div class="one-third">
+                                        <div class="stat">{{resistence.value}} </div>
+                                        <div class="stat-value">{{resistence.type}} </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div>Fraqueza(s):</div>
+                                <div>
+                                    <div class="one-third" *ngFor="let weak of this.weakness">
+                                        <div class="stat">{{weak.value}} </div>
+                                        <div class="stat-value">{{weak.type}} </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div> <!-- end clash-card barbarian-->
+                    </div> <!-- end wrapper -->
+
+                </div> <!-- end container -->
             </figcaption>
-        </figure>  
+        </figure>
     </div>
 </section>
