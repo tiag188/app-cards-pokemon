@@ -18,26 +18,25 @@
                     <b>ID do Pokémon: </b>{{this.id}}<br>
                     <b>Tipo: </b>{{this.type}}<br>
                 </p>
-                <p>
+                <span>
                     <b>Lista de ataques </b><br>
-                </p>
-                <ul *ngFor="let value of this.attack">
+                </span>
+                <ul *ngFor="let value of this.attacks">
                     <li><b>Nome: </b>{{value.name}}</li>
                     <li><b>Custo de “mana”:</b> {{value.convertedEnergyCost}}</li>
                     <li><b>Dano: </b>{{value.damage}}</li>
                     <li><b>Descrição: </b>{{value.text}}<br><br></li>
                 </ul>
+                
+                
                 <p>
-                    <b>Resistencia(s): </b><br>
+                    <b>Resistencia(s): </b> <span *ngFor="let resistence of this.resistance">{{resistence.type}}</span><br>
                     <b>Fraqueza(s): </b>
                 </p>
                 <p><br>
                     <a  mat-raised-button color="primary">Primary</a>
                 </p>
             </figcaption>
-        </figure>
+        </figure>  
     </div>
 </section>
-<pre>
-    {{this.card | json}}
-</pre>

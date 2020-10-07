@@ -16,7 +16,6 @@ var DetailsComponent = /** @class */ (function () {
     }
     DetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.spinner.show();
         this.route.paramMap.subscribe(function (params) {
             _this.getCard(params.get('id'));
         });
@@ -24,15 +23,17 @@ var DetailsComponent = /** @class */ (function () {
     DetailsComponent.prototype.ngOnDestroy = function () {
         this.getCard(this.id);
     };
+    //get card pokemon by id
     DetailsComponent.prototype.getCard = function (id) {
         var _this = this;
+        this.spinner.show();
         this.id = id;
         this.detailService.getCard(id).subscribe(function (data) {
             _this.card = data.card;
             _this.imagem = data.card.imageUrlHiRes;
             _this.name = data.card.name;
             _this.type = data.card.types;
-            _this.attack = data.card.attacks;
+            _this.attacks = data.card.attacks;
             _this.resistance = data.card.resistances;
             _this.weakness = data.card.weaknesses;
             _this.spinner.hide();

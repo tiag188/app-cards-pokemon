@@ -50,24 +50,12 @@ $mx-width: 50rem;
 // =========================
 // reset and styling stuff
 // =========================
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 .group:after {
   content: "";
   display: table;
   clear: both;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
 }
 
 body {
@@ -335,7 +323,6 @@ strong {
 }
 
 .item-caption p {
-  font-size: 87.5%;
   line-height: 1.333;
   margin-bottom: 1.25rem;
 
