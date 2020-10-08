@@ -649,7 +649,3 @@ sup {
   color: black;
   height: 26px;
 }
-
-.clash-card__unit-description ul:nth-child(3) li:last-child {
-  display: none;
-}
