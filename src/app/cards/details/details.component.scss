@@ -731,21 +731,21 @@ p.jc-center {
   clear: both;
 }
 .pokedex-loading{
-  width: 130px;
-    height: 102px;
+  width: 57%; 
+    height: 32%;
     background-position: center;
     background-image: url(https://thumbs.gfycat.com/WeakSparseDromedary-small.gif);
-    background-size: 152px;
+    background-size: 109%;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 41%;
+    top: 62%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    border: 1px solid $b;
+    border: 1px solid black;
     box-shadow: 0px 0px 7px 3px #1b1b1b;
     text-align: center;
-    color: $w;
-    padding-top: 100px;
+    color: white;
+    padding-top: 225px;
     text-shadow: 1px 1px 2px #000000;
 }
 .clash-card__unit-name {
