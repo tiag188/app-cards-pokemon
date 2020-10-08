@@ -82,7 +82,7 @@ strong {
   left: 50%;
   height: 100%;
   width: 50%;
-  max-width: 65rem;
+  max-width: 60rem;
   background-image: radial-gradient(#cccccc, rgba(204, 204, 204, 0) 60%);
   background-size: 50% 80%;
   background-repeat: no-repeat;
@@ -130,7 +130,7 @@ strong {
 .item-content {
   position: relative;
   width: 100%;
-  max-width: 65rem;
+  max-width: 60rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -148,7 +148,8 @@ strong {
 }
 .item-img img {
   display: block;
-  width: 100%;
+  width: 422px;
+  max-width: 100%;
   height: auto;
   transform-origin: 50% 100%;
   transform: translateZ(0rem);
@@ -163,8 +164,8 @@ strong {
   z-index: 9;
   position: absolute;
   opacity: 1 !important;
-  width: 530px;
-  top: -3px;
+  top: -1px;
+  width: 430px;
 }
 .item-img img:nth-child(2) {
   max-height: 549px;
@@ -250,7 +251,7 @@ strong {
 .intro {
   position: relative;
   width: 100%;
-  max-width: 65rem;
+  max-width: 60rem;
   margin: 0 auto;
   padding: 15% 2rem;
   text-align: center;

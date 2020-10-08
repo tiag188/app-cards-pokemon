@@ -20,7 +20,7 @@ export class ListService {
     console.log("Service Construtor Cards Pokemon OK");
   }
 
-  public getCards(): Observable<ListModel> {
+   getCards(): Observable<ListModel> {
     let endpoint = "?supertype=pokemon&pageSize=1000";
     return this.http
       .get<ListModel>(this.env + endpoint)

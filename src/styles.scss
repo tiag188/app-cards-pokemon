@@ -40,9 +40,11 @@ body {
 }
 
 $m: #efefef;
-$i: #21264B;
+$i: #0056b3;
+$v: #00d1b2;
+$x: #00b89c;
 $iconmargin: 35px;
-;
+
 $iconmargin: 35px;
 
 //Took about 100 more lines than I expected
@@ -191,7 +193,7 @@ body {
             width: 150px;
             height: 150px;
             border-radius: 100%;
-            background-color: #EE1B59;
+            background-color: $v;
             top: 100%;
             left: 0%;
             transform: translate(-50%, -50%);
@@ -243,7 +245,7 @@ body {
           .bar,
           &:before,
           &:after {
-            background-color: #FFFFFF;
+            background-color: $i;
           }
 
           .bar {
@@ -326,14 +328,14 @@ body {
 
             .content {
               border-radius: 100%;
-              background-color: #EE1B59;
+              background-color: $v;
               top: 100%;
               left: 0%;
               transform: translate(-50%, -50%);
               transition: background-color 0s, width 1.1s cubic-bezier(0.50, 0, 0.05, 1.75) 0.25s, height 1.1s cubic-bezier(0.50, 0, 0.05, 2) 0.25s;
 
               &:hover {
-                background-color: #DD1350;
+                background-color: $x;
               }
             }
           }

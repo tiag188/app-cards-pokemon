@@ -9,26 +9,30 @@ exports.__esModule = true;
 exports.DetailsComponent = void 0;
 var core_1 = require("@angular/core");
 var DetailsComponent = /** @class */ (function () {
-    function DetailsComponent(route, detailService, spinner) {
-        this.route = route;
-        this.detailService = detailService;
-        this.spinner = spinner;
+    function DetailsComponent(_location, _route, _detailService, _spinner) {
+        this._location = _location;
+        this._route = _route;
+        this._detailService = _detailService;
+        this._spinner = _spinner;
     }
     DetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.route.paramMap.subscribe(function (params) {
+        this._route.paramMap.subscribe(function (params) {
             _this.getCard(params.get('id'));
         });
     };
     DetailsComponent.prototype.ngOnDestroy = function () {
         this.getCard(this.id);
     };
+    DetailsComponent.prototype.backPage = function () {
+        this._location.back();
+    };
     //get card pokemon by id
     DetailsComponent.prototype.getCard = function (id) {
         var _this = this;
-        this.spinner.show();
+        this._spinner.show();
         this.id = id;
-        this.detailService.getCard(id).subscribe(function (data) {
+        this._detailService.getCard(id).subscribe(function (data) {
             _this.card = data.card;
             _this.imageUrlHi = data.card.imageUrlHiRes;
             _this.imageUrl = data.card.imageUrl;
@@ -37,7 +41,7 @@ var DetailsComponent = /** @class */ (function () {
             _this.attacks = data.card.attacks;
             _this.resistance = data.card.resistances;
             _this.weakness = data.card.weaknesses;
-            _this.spinner.hide();
+            _this._spinner.hide();
         }, function (error) {
             _this.error = error;
         });

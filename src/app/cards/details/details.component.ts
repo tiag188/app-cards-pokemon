@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { NgxSpinnerService } from "ngx-spinner";
 import { DetailsService } from './details.service';
@@ -20,10 +21,10 @@ export class DetailsComponent implements OnInit {
   card: string;
   error: any;
 
-  constructor(private route: ActivatedRoute, private detailService: DetailsService, private spinner: NgxSpinnerService) { }
+  constructor(private _location: Location, private _route: ActivatedRoute, private _detailService: DetailsService, private _spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params: ParamMap) => {
+    this._route.paramMap.subscribe((params: ParamMap) => {
       this.getCard(params.get('id'));
     })
   }
@@ -31,11 +32,15 @@ export class DetailsComponent implements OnInit {
   ngOnDestroy(): void {
     this.getCard(this.id);
   }
+  backPage() {
+    this._location.back();
+  }
   //get card pokemon by id
   public getCard(id: string) {
-    this.spinner.show();
+    this._spinner.show();
     this.id = id;
-    this.detailService.getCard(id).subscribe((data: any) => {
+    this._detailService.getCard(id).subscribe((data: any) => {
+     
       this.card = data.card;
       this.imageUrlHi = data.card.imageUrlHiRes;
       this.imageUrl = data.card.imageUrl;
@@ -44,7 +49,7 @@ export class DetailsComponent implements OnInit {
       this.attacks = data.card.attacks;
       this.resistance = data.card.resistances;
       this.weakness = data.card.weaknesses;
-      this.spinner.hide();
+      this._spinner.hide();
     }, (error: any) => {
       this.error = error;
     });
