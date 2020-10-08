@@ -2,7 +2,6 @@
 // colors
 // =========================
 $master-grey: #f0f0f0;
-$k: #00d1b2;
 $w: white;
 $b: black;
 
@@ -18,7 +17,7 @@ $font-spot: #08c;
 
 
 $border-radius-size: 14px;
-$pokemon: #3273dc;
+$gray: #3273dc;
 
 
 
@@ -473,7 +472,7 @@ strong {
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
 
 $border-radius-size: 14px;
-$pokemon: #0056b3;
+$gray: #444;
 $archer: #EE5487;
 $giant: #F6901A;
 $goblin: #82BB30;
@@ -554,7 +553,7 @@ li {
 }
 
 .clash-card__level--pokemon {
-  color: $pokemon;
+  color: $gray;
 }
 
 
@@ -571,7 +570,7 @@ li {
 }
 
 .clash-card__unit-stats--pokemon {
-  background: $pokemon;
+  background: $gray;
 
   .one-third {
     border-right: 1px solid $k;
@@ -690,8 +689,8 @@ body {
 }
 
 .clash-card__image--pokemon {
-  background-color: #0056b3;
-  background-image: linear-gradient(to right, #0056b3 , #00d1b2);
+  background-color: $gray;
+  background-image: linear-gradient(to right, $gray , $k);
 
   img {
     width: 189px;
@@ -713,7 +712,7 @@ body {
 }
 
 .clash-card__level--pokemon {
-  color: $pokemon;
+  color: $gray;
 }
 
 p.jc-center a {
@@ -761,7 +760,7 @@ p.jc-center {
 }
 
 .clash-card__unit-stats--pokemon {
-  background: $pokemon;
+  background: $gray;
 
   .one-third {
     border-right: 1px solid $k;
