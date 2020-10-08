@@ -8,33 +8,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.ListComponent = void 0;
 var core_1 = require("@angular/core");
+var package_json_1 = require("../../../../package.json");
 var ListComponent = /** @class */ (function () {
-    function ListComponent(router, route, listService, spinner) {
-        this.router = router;
-        this.route = route;
-        this.listService = listService;
-        this.spinner = spinner;
+    function ListComponent(_router, _listService, _spinner) {
+        this._router = _router;
+        this._listService = _listService;
+        this._spinner = _spinner;
+        this.version = package_json_1.version;
         this.listCardFilter = { name: '' };
     }
     ListComponent.prototype.ngOnInit = function () {
-        this.spinner.show();
+        this._spinner.show();
         this.getCards();
     };
     ListComponent.prototype.ngOnDestroy = function () {
         this.getCards();
-        this.spinner;
+        this._spinner;
     };
     ListComponent.prototype.getCards = function () {
         var _this = this;
-        this.listService.getCards().subscribe(function (data) {
+        this._listService.getCards().subscribe(function (data) {
             _this.listCard = data.cards;
-            _this.spinner.hide();
+            _this._spinner.hide();
         }, function (error) {
             _this.error = error;
         });
     };
     ListComponent.prototype.gotoCardDetails = function (url, id) {
-        this.router.navigate([url, id]).then(function (e) {
+        this._router.navigate([url, id]).then(function (e) {
             if (e) {
                 console.log("Navigation is successful!" + e);
             }

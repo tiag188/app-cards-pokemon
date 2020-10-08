@@ -3,6 +3,7 @@ import { ListModel } from './models/list.model';
 import { ListService } from './services/list.service';
 import { NgxSpinnerService } from "ngx-spinner";
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { version } from '../../../../package.json';
 
 @Component({
   selector: 'app-list',
@@ -10,34 +11,36 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
+  version: string = version;
   listCardFilter: any = { name: '' };
   listCard: ListModel;
   error: any;
   name: any;
 
-  constructor(private router: Router, private route: ActivatedRoute, private listService: ListService, private spinner: NgxSpinnerService) { }
+  constructor(private _router: Router, private _listService: ListService, private _spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
-    this.spinner.show();
+    this._spinner.show();
     this.getCards();
   }
 
   ngOnDestroy(): void {
     this.getCards();
-    this.spinner;
+ 
+    this._spinner;
   }
 
   public getCards() {
-    this.listService.getCards().subscribe((data: any) => {
+    this._listService.getCards().subscribe((data: any) => {
       this.listCard = data.cards;
-      this.spinner.hide()
+      this._spinner.hide()
     }, (error: any) => {
       this.error = error;
     });
   }
 
   public gotoCardDetails(url: string, id: string) {
-    this.router.navigate([url, id]).then((e) => {
+    this._router.navigate([url, id]).then((e) => {
       if (e) {
         console.log("Navigation is successful!" + e);
       } else {

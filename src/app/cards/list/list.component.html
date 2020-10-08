@@ -1,5 +1,6 @@
 <animation-pikachu></animation-pikachu>
 <div id="main">
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -18,16 +19,15 @@
                 <img src='../../assets/images/loading.gif' />
             </ngx-spinner>
             <mat-card class="col-lg-2" *ngFor="let value of listCard  | filterBy: listCardFilter | sort:'name' ">
-                <a [routerLink]="['/details', value.id]" (click)="gotoCardDetails('/details',value.id)" routerLinkActive="active">
+                <a [routerLink]="['/details', value.id]" (click)="gotoCardDetails('/details',value.id)"
+                    routerLinkActive="active">
                     <div>
                         <h4>
-
                             <b>ID:</b> {{value?.id}} <br />
                             <b>Nome:</b> {{value?.name }} <br />
                             <b *ngIf="value.types">Tipo: </b> <span
                                 *ngFor="let value2 of value?.types">{{value2}}</span>
                             <b *ngIf="!value.types">Carta Especial</b>
-
                         </h4>
                     </div>
                     <div class="gallery-item ">

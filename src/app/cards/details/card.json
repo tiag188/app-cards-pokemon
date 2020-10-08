@@ -1,0 +1,52 @@
+    {
+  "id": "xy6-40",
+  "name": "Absol",
+  "nationalPokedexNumber": 359,
+  "imageUrl": "https://images.pokemontcg.io/xy6/40.png",
+  "imageUrlHiRes": "https://images.pokemontcg.io/xy6/40_hires.png",
+  "types": [
+    "Darkness"
+  ],
+  "supertype": "Pokémon",
+  "subtype": "Basic",
+  "ability": {
+    "name": "Cursed Eyes",
+    "text": "When you play this Pokémon from your hand onto your Bench, you may move 3 damage counters from 1 of your opponent's Pokémon to another of his or her Pokémon.",
+    "type": "Ability"
+  },
+  "hp": "100",
+  "retreatCost": [
+    "Colorless"
+  ],
+  "convertedRetreatCost": 1,
+  "number": "40",
+  "artist": "Kagemaru Himeno",
+  "rarity": "Rare Holo",
+  "series": "XY",
+  "set": "Roaring Skies",
+  "setCode": "xy6",
+  "attacks": [
+    {
+      "cost": [
+        "Darkness",
+        "Colorless"
+      ],
+      "name": "Mach Claw",
+      "text": "This attack's damage isn't affected by Resistance.",
+      "damage": "30",
+      "convertedEnergyCost": 2
+    }
+  ],
+  "resistances": [
+    {
+      "type": "Psychic",
+      "value": "-20"
+    }
+  ],
+  "weaknesses": [
+    {
+      "type": "Fighting",
+      "value": "×2"
+    }
+  ]
+}
