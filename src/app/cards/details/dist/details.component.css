@@ -392,7 +392,7 @@ li {
 }
 
 .clash-card__level--pokemon {
-  color: #EC9B3B;
+  color: #0056b3;
 }
 
 .clash-card__unit-name {
@@ -408,10 +408,10 @@ li {
 }
 
 .clash-card__unit-stats--pokemon {
-  background: #EC9B3B;
+  background: #0056b3;
 }
 .clash-card__unit-stats--pokemon .one-third {
-  border-right: 1px solid #BD7C2F;
+  border-right: 1px solid #00d1b2;
 }
 
 .clash-card__unit-stats {
@@ -515,7 +515,8 @@ body {
 }
 
 .clash-card__image--pokemon {
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg");
+  background-color: #0056b3;
+  background-image: linear-gradient(to right, #0056b3, #00d1b2);
 }
 .clash-card__image--pokemon img {
   width: 189px;
@@ -535,7 +536,7 @@ body {
 }
 
 .clash-card__level--pokemon {
-  color: #EC9B3B;
+  color: #0056b3;
 }
 
 p.jc-center a {
@@ -584,10 +585,10 @@ p.jc-center {
 }
 
 .clash-card__unit-stats--pokemon {
-  background: #EC9B3B;
+  background: #0056b3;
 }
 .clash-card__unit-stats--pokemon .one-third {
-  border-right: 1px solid #BD7C2F;
+  border-right: 1px solid #00d1b2;
 }
 
 .clash-card__unit-stats {

@@ -2,20 +2,25 @@
 // colors
 // =========================
 $master-grey: #f0f0f0;
+$k: #00d1b2;
+$w: white;
+$b: black;
 
 // 3 shades of grey
-$master-l-10: mix(white, $master-grey, 10%);
-$master-d-10: mix(black, $master-grey, 10%);
-$master-d-15: mix(black, $master-grey, 15%);
+$master-l-10: mix($w, $master-grey, 10%);
+$master-d-10: mix($b, $master-grey, 10%);
+$master-d-15: mix($b, $master-grey, 15%);
 
 // font colors
-$font-base: mix(black, $master-grey, 50%);
-$font-dark: mix(black, $master-grey, 80%);
+$font-base: mix($b, $master-grey, 50%);
+$font-dark: mix($b, $master-grey, 80%);
 $font-spot: #08c;
 
 
 $border-radius-size: 14px;
 $pokemon: #3273dc;
+
+
 
 // =========================
 // one breakpoint is enough for this demo
@@ -143,7 +148,7 @@ strong {
   transform: rotateX(70deg);
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  //box-shadow: inset 0 0 0 10px black;
+  //box-shadow: inset 0 0 0 10px $b;
 
   &:before,
   &:after {
@@ -468,7 +473,7 @@ strong {
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
 
 $border-radius-size: 14px;
-$pokemon: #EC9B3B;
+$pokemon: #0056b3;
 $archer: #EE5487;
 $giant: #F6901A;
 $goblin: #82BB30;
@@ -510,14 +515,14 @@ li {
 }
 
 .clash-card {
-  background: white;
+  background: $w;
   width: 300px;
   display: inline-block;
   margin: auto;
   border-radius: $border-radius-size + 5;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px black;
+  box-shadow: -1px 15px 30px -12px $b;
   z-index: 9999;
 }
 
@@ -555,7 +560,7 @@ li {
 
 .clash-card__unit-name {
   font-size: 26px;
-  color: black;
+  color: $b;
   font-weight: 900;
   margin-bottom: 5px;
 }
@@ -569,13 +574,13 @@ li {
   background: $pokemon;
 
   .one-third {
-    border-right: 1px solid #BD7C2F;
+    border-right: 1px solid $k;
   }
 }
 
 .clash-card__unit-stats {
 
-  color: white;
+  color: $w;
   font-weight: 700;
   border-bottom-left-radius: $border-radius-size;
   border-bottom-right-radius: $border-radius-size;
@@ -665,14 +670,14 @@ body {
 
 
 .clash-card {
-  background: white;
+  background: $w;
   width:  458px;
   display: inline-block;
   margin: auto;
   border-radius: $border-radius-size + 5;
   position: relative;
   text-align: center;
-  box-shadow: -1px 15px 30px -12px black;
+  box-shadow: -1px 15px 30px -12px $b;
   z-index: 9999;
 }
 
@@ -685,7 +690,8 @@ body {
 }
 
 .clash-card__image--pokemon {
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
+  background-color: #0056b3;
+  background-image: linear-gradient(to right, #0056b3 , #00d1b2);
 
   img {
     width: 189px;
@@ -711,7 +717,7 @@ body {
 }
 
 p.jc-center a {
-  color: white;
+  color: $w;
 }
 
 p.jc-center {
@@ -735,16 +741,16 @@ p.jc-center {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    border: 1px solid black;
+    border: 1px solid $b;
     box-shadow: 0px 0px 7px 3px #1b1b1b;
     text-align: center;
-    color: white;
+    color: $w;
     padding-top: 100px;
     text-shadow: 1px 1px 2px #000000;
 }
 .clash-card__unit-name {
   font-size: 26px;
-  color: black;
+  color: $b;
   font-weight: 900;
   margin-bottom: 5px;
 }
@@ -758,13 +764,13 @@ p.jc-center {
   background: $pokemon;
 
   .one-third {
-    border-right: 1px solid #BD7C2F;
+    border-right: 1px solid $k;
   }
 }
 
 .clash-card__unit-stats {
 
-  color: white;
+  color: $w;
   font-weight: 700;
   border-bottom-left-radius: $border-radius-size;
   border-bottom-right-radius: $border-radius-size;
@@ -820,11 +826,11 @@ p.jc-center {
 
 sup {
 
-  background: white;
+  background: $w;
   padding: 13px 6px;
   margin-top: -2px;
   border-radius: 18px;
-  color: black;
+  color: $b;
   height: 26px;
 }
 .clash-card__unit-description ul:nth-child(3) li:last-child{
