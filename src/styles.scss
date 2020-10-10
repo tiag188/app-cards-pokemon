@@ -3,6 +3,15 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
+$w: #FFFFFF;
+$m: #efefef;
+$i: #0056b3;
+$v: #00d1b2;
+$x: #00b89c;
+$iconmargin: 35px;
+$iconmargin: 35px;
+
+
 @mixin font-default {
   font-size: 1.2em;
 }
@@ -42,25 +51,22 @@ body {
   }
 }
 
-$m: #efefef;
-$i: #0056b3;
-$v: #00d1b2;
-$x: #00b89c;
-$iconmargin: 35px;
-
-$iconmargin: 35px;
-
-//Took about 100 more lines than I expected
+/* -----------------------------------*/
+/* ---------->>> BODY <<<-----------*/
+/* -----------------------------------*/
 body {
   background-color: $m;
   overflow-x: hidden;
 
+  /* -----------------------------------*/
+  /* ---------->>> NAV <<<-----------*/
+  /* -----------------------------------*/
   .base {
     z-index: 90;
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: #FFFFFF;
+    background-color: $w;
     width: 98px;
     height: 98px;
     transition: all 1s cubic-bezier(0.50, -0.75, 0.05, 1);
@@ -69,7 +75,7 @@ body {
     //overflow:hidden;
     .menu {
       z-index: 100;
-      background-color: #FFFFFF;
+      background-color: $w;
       position: absolute;
       top: 0px;
       left: 0px;
@@ -146,7 +152,7 @@ body {
       .fa-calendar-o {
         top: 0px;
         left: 0px;
-        color: #fff;
+        color: $w;
         transition-delay: 0.1s;
       }
 
@@ -293,7 +299,7 @@ body {
         .fa-calendar-o {
           top: 141px;
           left: 141px;
-          color: #fff;
+          color: $w;
           transition-delay: 0.65s;
         }
 
@@ -352,8 +358,21 @@ body {
       }
     }
   }
+
+  /* -----------------------------------*/
+  /* ---------->>> END NAV <<<-----------*/
+  /* -----------------------------------*/
 }
 
+/* -----------------------------------*/
+/* ---------->>> END BODY <<<-----------*/
+/* -----------------------------------*/
+
+
+
+/* -----------------------------------*/
+/* ---------->>> MOBILE <<<-----------*/
+/* -----------------------------------*/
 /* Extra small devices (phones, 420px and down) */
 @media only screen and (max-width: 420px) {}
 
@@ -368,3 +387,7 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
+
+/* -----------------------------------*/
+/* ---------->>> END MOBILE <<<-----------*/
+/* -----------------------------------*/

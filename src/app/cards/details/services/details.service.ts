@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { catchError, tap, map } from 'rxjs/operators';
 
 import { environment } from 'src/environments/environment';
+import { DetailsModel } from '../models/details.model';
 
 
 const httpOptions = {
@@ -19,10 +20,10 @@ export class DetailsService {
     console.log("Service Construtor Cards Pokemon OK");
   }
 
-  getCard(id: string): Observable<any> {
+  getCard(id: string): Observable<DetailsModel> {
     const url = `${environment.apiUrl}/${id}`;
     console.log(url);
-    return this.http.get<any>(url).pipe(
+    return this.http.get<DetailsModel>(url).pipe(
       tap(_ => console.log(`read the card id = ${id}`)),
       catchError(this.handleError<any>(`getCard id=${id}`))
     );

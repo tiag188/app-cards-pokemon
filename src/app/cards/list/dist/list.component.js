@@ -20,8 +20,7 @@ var ListComponent = /** @class */ (function () {
         this._spinner.show();
         this.getCards();
     }
-    ListComponent.prototype.ngOnInit = function () {
-    };
+    ListComponent.prototype.ngOnInit = function () { };
     ListComponent.prototype.ngOnDestroy = function () {
         this.getCards();
         this._spinner;
