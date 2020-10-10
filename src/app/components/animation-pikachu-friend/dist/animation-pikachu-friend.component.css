@@ -18,6 +18,7 @@ li {
   left: 50%;
   top: 0%;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .heading {
@@ -45,61 +46,61 @@ li {
 .mountain-range .mountain:nth-child(1) {
   width: 0;
   height: 0;
-  margin-top: 32px;
-  margin-left: -60%;
-  border-left: 175px solid transparent;
-  border-right: 175px solid transparent;
-  border-bottom: 87.5px solid #75bbff;
-}
-.mountain-range .mountain:nth-child(2) {
-  width: 0;
-  height: 0;
-  margin-top: 22px;
-  margin-left: -60%;
-  border-left: 159px solid transparent;
-  border-right: 159px solid transparent;
-  border-bottom: 79.5px solid #75bbff;
-}
-.mountain-range .mountain:nth-child(3) {
-  width: 0;
-  height: 0;
-  margin-top: 44px;
-  margin-left: -60%;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
-  border-bottom: 75px solid #75bbff;
-}
-.mountain-range .mountain:nth-child(4) {
-  width: 0;
-  height: 0;
   margin-top: 34px;
   margin-left: -60%;
   border-left: 160px solid transparent;
   border-right: 160px solid transparent;
   border-bottom: 80px solid #75bbff;
 }
+.mountain-range .mountain:nth-child(2) {
+  width: 0;
+  height: 0;
+  margin-top: 40px;
+  margin-left: -60%;
+  border-left: 194px solid transparent;
+  border-right: 194px solid transparent;
+  border-bottom: 97px solid #75bbff;
+}
+.mountain-range .mountain:nth-child(3) {
+  width: 0;
+  height: 0;
+  margin-top: 34px;
+  margin-left: -60%;
+  border-left: 188px solid transparent;
+  border-right: 188px solid transparent;
+  border-bottom: 94px solid #75bbff;
+}
+.mountain-range .mountain:nth-child(4) {
+  width: 0;
+  height: 0;
+  margin-top: 21px;
+  margin-left: -60%;
+  border-left: 179px solid transparent;
+  border-right: 179px solid transparent;
+  border-bottom: 89.5px solid #75bbff;
+}
 .mountain-range .mountain:nth-child(5) {
   width: 0;
   height: 0;
-  margin-top: 41px;
+  margin-top: 39px;
   margin-left: -60%;
-  border-left: 160px solid transparent;
-  border-right: 160px solid transparent;
-  border-bottom: 80px solid #75bbff;
+  border-left: 179px solid transparent;
+  border-right: 179px solid transparent;
+  border-bottom: 89.5px solid #75bbff;
 }
 .mountain-range .mountain:nth-child(6) {
   width: 0;
   height: 0;
-  margin-top: 43px;
+  margin-top: 34px;
   margin-left: -60%;
-  border-left: 156px solid transparent;
-  border-right: 156px solid transparent;
-  border-bottom: 78px solid #75bbff;
+  border-left: 183px solid transparent;
+  border-right: 183px solid transparent;
+  border-bottom: 91.5px solid #75bbff;
 }
 .mountain-range .mountain:nth-child(7) {
   width: 0;
   height: 0;
-  margin-top: 32px;
+  margin-top: 25px;
   margin-left: -60%;
   border-left: 154px solid transparent;
   border-right: 154px solid transparent;
@@ -108,11 +109,11 @@ li {
 .mountain-range .mountain:nth-child(8) {
   width: 0;
   height: 0;
-  margin-top: 44px;
+  margin-top: 27px;
   margin-left: -60%;
-  border-left: 197px solid transparent;
-  border-right: 197px solid transparent;
-  border-bottom: 98.5px solid #75bbff;
+  border-left: 199px solid transparent;
+  border-right: 199px solid transparent;
+  border-bottom: 99.5px solid #75bbff;
 }
 
 .forest {
@@ -522,12 +523,12 @@ li {
   border-radius: 100%;
 }
 .sparkles .sparkle:nth-child(1) {
-  background-color: #e9fbff;
-  box-shadow: 0px 0px 10px #e9fbff;
+  background-color: #ffeefc;
+  box-shadow: 0px 0px 10px #ffeefc;
 }
 .sparkles .sparkle:nth-child(2) {
-  background-color: #e9fbff;
-  box-shadow: 0px 0px 10px #e9fbff;
+  background-color: #f3ffe4;
+  box-shadow: 0px 0px 10px #f3ffe4;
 }
 .sparkles .sparkle:nth-child(3) {
   background-color: #fffce6;
@@ -538,8 +539,8 @@ li {
   box-shadow: 0px 0px 10px #e9fbff;
 }
 .sparkles .sparkle:nth-child(5) {
-  background-color: #ffeefc;
-  box-shadow: 0px 0px 10px #ffeefc;
+  background-color: #e9fbff;
+  box-shadow: 0px 0px 10px #e9fbff;
 }
 .sparkles .sparkle:nth-child(6) {
   background-color: #f3ffe4;
@@ -550,44 +551,44 @@ li {
   box-shadow: 0px 0px 10px #fffce6;
 }
 .sparkles .sparkle:nth-child(8) {
+  background-color: #ffeefc;
+  box-shadow: 0px 0px 10px #ffeefc;
+}
+.sparkles .sparkle:nth-child(9) {
   background-color: #fffce6;
   box-shadow: 0px 0px 10px #fffce6;
 }
-.sparkles .sparkle:nth-child(9) {
-  background-color: #e9fbff;
-  box-shadow: 0px 0px 10px #e9fbff;
-}
 .sparkles .sparkle:nth-child(10) {
-  background-color: #e9fbff;
-  box-shadow: 0px 0px 10px #e9fbff;
+  background-color: #ffeefc;
+  box-shadow: 0px 0px 10px #ffeefc;
 }
 .sparkles .sparkle:nth-child(11) {
-  background-color: #f3ffe4;
-  box-shadow: 0px 0px 10px #f3ffe4;
+  background-color: #ffeefc;
+  box-shadow: 0px 0px 10px #ffeefc;
 }
 .sparkles .sparkle:nth-child(12) {
   background-color: #e9fbff;
   box-shadow: 0px 0px 10px #e9fbff;
 }
 .sparkles .sparkle:nth-child(13) {
-  background-color: #fffce6;
-  box-shadow: 0px 0px 10px #fffce6;
-}
-.sparkles .sparkle:nth-child(14) {
   background-color: #f3ffe4;
   box-shadow: 0px 0px 10px #f3ffe4;
 }
-.sparkles .sparkle:nth-child(15) {
-  background-color: #ffeefc;
-  box-shadow: 0px 0px 10px #ffeefc;
-}
-.sparkles .sparkle:nth-child(16) {
+.sparkles .sparkle:nth-child(14) {
   background-color: #fffce6;
   box-shadow: 0px 0px 10px #fffce6;
 }
+.sparkles .sparkle:nth-child(15) {
+  background-color: #fffce6;
+  box-shadow: 0px 0px 10px #fffce6;
+}
+.sparkles .sparkle:nth-child(16) {
+  background-color: #e9fbff;
+  box-shadow: 0px 0px 10px #e9fbff;
+}
 .sparkles .sparkle:nth-child(17) {
-  background-color: #ffeefc;
-  box-shadow: 0px 0px 10px #ffeefc;
+  background-color: #fffce6;
+  box-shadow: 0px 0px 10px #fffce6;
 }
 .sparkles .sparkle:nth-child(18) {
   background-color: #e9fbff;
@@ -606,8 +607,8 @@ li {
   box-shadow: 0px 0px 10px #ffeefc;
 }
 .sparkles .sparkle:nth-child(22) {
-  background-color: #ffeefc;
-  box-shadow: 0px 0px 10px #ffeefc;
+  background-color: #e9fbff;
+  box-shadow: 0px 0px 10px #e9fbff;
 }
 .sparkles .sparkle:nth-child(23) {
   background-color: #fffce6;
@@ -618,8 +619,8 @@ li {
   box-shadow: 0px 0px 10px #fffce6;
 }
 .sparkles .sparkle:nth-child(25) {
-  background-color: #fffce6;
-  box-shadow: 0px 0px 10px #fffce6;
+  background-color: #e9fbff;
+  box-shadow: 0px 0px 10px #e9fbff;
 }
 .sparkles .sparkle:nth-child(26) {
   background-color: #ffeefc;
@@ -630,24 +631,24 @@ li {
   box-shadow: 0px 0px 10px #ffeefc;
 }
 .sparkles .sparkle:nth-child(28) {
+  background-color: #f3ffe4;
+  box-shadow: 0px 0px 10px #f3ffe4;
+}
+.sparkles .sparkle:nth-child(29) {
   background-color: #fffce6;
   box-shadow: 0px 0px 10px #fffce6;
 }
-.sparkles .sparkle:nth-child(29) {
-  background-color: #f3ffe4;
-  box-shadow: 0px 0px 10px #f3ffe4;
-}
 .sparkles .sparkle:nth-child(30) {
-  background-color: #f3ffe4;
-  box-shadow: 0px 0px 10px #f3ffe4;
+  background-color: #ffeefc;
+  box-shadow: 0px 0px 10px #ffeefc;
 }
 .sparkles .sparkle:nth-child(31) {
   background-color: #ffeefc;
   box-shadow: 0px 0px 10px #ffeefc;
 }
 .sparkles .sparkle:nth-child(32) {
-  background-color: #e9fbff;
-  box-shadow: 0px 0px 10px #e9fbff;
+  background-color: #ffeefc;
+  box-shadow: 0px 0px 10px #ffeefc;
 }
 
 .one {

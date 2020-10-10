@@ -262,7 +262,7 @@ strong {
 
   img {
     display: block;
-    width:422px;
+    width: 422px;
     max-width: 100%;
     height: auto;
     transform-origin: 50% 100%;
@@ -277,7 +277,8 @@ strong {
     opacity: 1 !important;
     top: -1px;
     width: 430px;
-}
+  }
+
   img:nth-child(2) {
     max-height: 549px;
     max-width: 400px;
@@ -498,6 +499,7 @@ body {
   margin: auto;
   width: 600px;
   text-align: center;
+  max-width: 100%;
 }
 
 .wrapper {
@@ -524,6 +526,13 @@ li {
   text-align: center;
   box-shadow: -1px 15px 30px -12px $b;
   z-index: 9999;
+  max-width: 100%;
+
+  .one-third div:first-child {
+    font-size: 1.4em;
+    padding-bottom: 11px;
+    color: #d9e6f4;
+  }
 }
 
 .clash-card__image {
@@ -568,6 +577,12 @@ li {
 .clash-card__unit-description {
   padding: 20px;
   margin-bottom: 10px;
+
+  span b {
+    font-size: 1.8em;
+    color: #0056b3;
+
+  }
 }
 
 .clash-card__unit-stats--pokemon {
@@ -671,7 +686,7 @@ body {
 
 .clash-card {
   background: $w;
-  width:  458px;
+  width: 458px;
   display: inline-block;
   margin: auto;
   border-radius: $border-radius-size + 5;
@@ -691,7 +706,7 @@ body {
 
 .clash-card__image--pokemon {
   background-color: $gray;
-  background-image: linear-gradient(to right, $gray , $k);
+  background-image: linear-gradient(to right, $gray, $k);
 
   img {
     width: 189px;
@@ -730,24 +745,26 @@ p.jc-center {
 .clearfix {
   clear: both;
 }
-.pokedex-loading{
-  width: 57%; 
-    height: 32%;
-    background-position: center;
-    background-image: url(https://thumbs.gfycat.com/WeakSparseDromedary-small.gif);
-    background-size: 109%;
-    position: absolute;
-    left: 41%;
-    top: 62%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    border: 1px solid black;
-    box-shadow: 0px 0px 7px 3px #1b1b1b;
-    text-align: center;
-    color: white;
-    padding-top: 225px;
-    text-shadow: 1px 1px 2px #000000;
+
+.pokedex-loading {
+  width: 57%;
+  height: 32%;
+  background-position: center;
+  background-image: url(https://thumbs.gfycat.com/WeakSparseDromedary-small.gif);
+  background-size: 109%;
+  position: absolute;
+  left: 41%;
+  top: 62%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border: 1px solid black;
+  box-shadow: 0px 0px 7px 3px #1b1b1b;
+  text-align: center;
+  color: white;
+  padding-top: 225px;
+  text-shadow: 1px 1px 2px #000000;
 }
+
 .clash-card__unit-name {
   font-size: 26px;
   color: $b;
@@ -762,10 +779,6 @@ p.jc-center {
 
 .clash-card__unit-stats--pokemon {
   background: $gray;
-
-  .one-third {
-    border-right: 1px solid $k;
-  }
 }
 
 .clash-card__unit-stats {
@@ -832,4 +845,39 @@ sup {
   border-radius: 18px;
   color: $b;
   height: 26px;
+}
+
+.btn.btn-dark {
+  background: #0056b3;
+}
+
+
+@media only screen and (max-width: 420px) {
+  .item-content.group {
+    display: block;
+
+    .item-img,
+    .item-caption {
+      width: 100%;
+    }
+
+    img {
+
+      max-width: 100%;
+
+      margin-top: 90px;
+    }
+
+    a.btn {
+      font-size: 1.5em;
+    }
+
+    .pokedex-loading {
+      left: 50%;
+    }
+
+    .item-caption {
+      padding: 0;
+    }
+  }
 }

@@ -16,10 +16,11 @@ var ListComponent = /** @class */ (function () {
         this._spinner = _spinner;
         this.version = package_json_1.version;
         this.listCardFilter = { name: '' };
-    }
-    ListComponent.prototype.ngOnInit = function () {
+        this.version = "10.1.5";
         this._spinner.show();
         this.getCards();
+    }
+    ListComponent.prototype.ngOnInit = function () {
     };
     ListComponent.prototype.ngOnDestroy = function () {
         this.getCards();

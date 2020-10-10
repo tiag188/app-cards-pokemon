@@ -4,7 +4,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 @mixin font-default {
-  font-size: 16px;
+  font-size: 1.2em;
 }
 
 html,
@@ -18,23 +18,26 @@ body {
 
   p,
   li {
-    font-size: 15px;
+    font-size: 1.3em;
+    line-height: 27px;
   }
 
   li {
     list-style: none;
 
   }
-  .center{
+
+  .center {
     display: flex;
     justify-content: center;
-    }
+  }
+
   b {
     @include font-default();
   }
 
   ul {
-   margin-bottom: 0px;
+    margin-bottom: 0px;
     padding-left: 27px;
   }
 }
@@ -350,3 +353,18 @@ body {
     }
   }
 }
+
+/* Extra small devices (phones, 420px and down) */
+@media only screen and (max-width: 420px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

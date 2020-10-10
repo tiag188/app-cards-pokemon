@@ -340,6 +340,7 @@ body {
   margin: auto;
   width: 600px;
   text-align: center;
+  max-width: 100%;
 }
 
 .wrapper {
@@ -364,6 +365,12 @@ li {
   text-align: center;
   box-shadow: -1px 15px 30px -12px black;
   z-index: 9999;
+  max-width: 100%;
+}
+.clash-card .one-third div:first-child {
+  font-size: 1.4em;
+  padding-bottom: 11px;
+  color: #d9e6f4;
 }
 
 .clash-card__image {
@@ -405,6 +412,10 @@ li {
 .clash-card__unit-description {
   padding: 20px;
   margin-bottom: 10px;
+}
+.clash-card__unit-description span b {
+  font-size: 1.8em;
+  color: #0056b3;
 }
 
 .clash-card__unit-stats--pokemon {
@@ -587,9 +598,6 @@ p.jc-center {
 .clash-card__unit-stats--pokemon {
   background: #444;
 }
-.clash-card__unit-stats--pokemon .one-third {
-  border-right: 1px solid #0056b3;
-}
 
 .clash-card__unit-stats {
   color: white;
@@ -648,4 +656,31 @@ sup {
   border-radius: 18px;
   color: black;
   height: 26px;
+}
+
+.btn.btn-dark {
+  background: #0056b3;
+}
+
+@media only screen and (max-width: 420px) {
+  .item-content.group {
+    display: block;
+  }
+  .item-content.group .item-img,
+.item-content.group .item-caption {
+    width: 100%;
+  }
+  .item-content.group img {
+    max-width: 100%;
+    margin-top: 90px;
+  }
+  .item-content.group a.btn {
+    font-size: 1.5em;
+  }
+  .item-content.group .pokedex-loading {
+    left: 50%;
+  }
+  .item-content.group .item-caption {
+    padding: 0;
+  }
 }
