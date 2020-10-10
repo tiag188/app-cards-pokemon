@@ -21,7 +21,18 @@ body {
   height: 100%;
 }
 
+
+
+
+
+
+/* -----------------------------------*/
+/* ---------->>> BODY <<<-----------*/
+/* -----------------------------------*/
 body {
+  background-color: $m;
+  overflow-x: hidden;
+
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 
@@ -49,14 +60,10 @@ body {
     margin-bottom: 0px;
     padding-left: 27px;
   }
-}
 
-/* -----------------------------------*/
-/* ---------->>> BODY <<<-----------*/
-/* -----------------------------------*/
-body {
-  background-color: $m;
-  overflow-x: hidden;
+  a {
+    color: #212529;
+  }
 
   /* -----------------------------------*/
   /* ---------->>> NAV <<<-----------*/
@@ -374,7 +381,18 @@ body {
 /* ---------->>> MOBILE <<<-----------*/
 /* -----------------------------------*/
 /* Extra small devices (phones, 420px and down) */
-@media only screen and (max-width: 420px) {}
+@media only screen and (max-width: 420px) {
+  #main {
+    .container {
+
+      background: white;
+      padding-top: 18px;
+    }
+  }
+  .mat-typography h4 {
+    font-size: 1.4em;
+  }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {}

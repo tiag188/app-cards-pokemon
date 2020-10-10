@@ -22,6 +22,9 @@ h4 {
   transition: border 0.4s linear;
 }
 
+.mat-card {
+  padding: 18px 0px;
+}
 .mat-card a {
   cursor: pointer;
 }
