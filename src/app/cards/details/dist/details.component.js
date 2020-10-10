@@ -33,14 +33,13 @@ var DetailsComponent = /** @class */ (function () {
         this._spinner.show();
         this.id = id;
         this._detailService.getCard(id).subscribe(function (data) {
-            _this.card = data.card;
             _this.imageUrlHi = data.card.imageUrlHiRes;
             _this.imageUrl = data.card.imageUrl;
             _this.name = data.card.name;
             _this.type = data.card.types;
             _this.attacks = data.card.attacks;
             _this.resistance = data.card.resistances;
-            _this.weakness = data.card.weaknesses;
+            _this.weakness = data.card.weakness;
             _this._spinner.hide();
         }, function (error) {
             _this.error = error;

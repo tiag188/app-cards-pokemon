@@ -19,8 +19,12 @@
                 <img src='../../assets/images/loading.gif' />
             </ngx-spinner>
             <mat-card class="col-lg-2" *ngFor="let value of listCard | filterBy: listCardFilter | sort:'name'  ">
-                <a [routerLink]="['/details', value.id]" (click)="gotoCardDetails('/details',value.id)"
-                    routerLinkActive="active">
+               
+               <!----------------------------------->
+               <!--- The use of href makes loading the detailed card faster, due to the quantity of 1000 records returned with image -->
+                <!--<a href="/details/{{value.id}}" [routerLink]="['/details', value.id]" (click)="gotoCardDetails('/details',value.id)"
+                    routerLinkActive="active">-->
+                    <a href="/details/{{value.id}}" routerLinkActive="active">
                     <div>
                         <h4>
                             <b>ID:</b> {{value?.id}} <br />

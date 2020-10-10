@@ -4,6 +4,7 @@ import { ListService } from './services/list.service';
 import { NgxSpinnerService } from "ngx-spinner";
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { version } from '../../../../package.json';
+import { ListCardModel } from './models/ListCard.model';
 
 @Component({
   selector: 'app-list',
@@ -13,7 +14,7 @@ import { version } from '../../../../package.json';
 export class ListComponent implements OnInit {
   version: string = version;
   listCardFilter: any = { name: '' };
-  listCard: ListModel;
+  listCard: ListCardModel;
   error: any;
   name: any;
 
@@ -23,18 +24,15 @@ export class ListComponent implements OnInit {
     this.getCards();
   }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   ngOnDestroy(): void {
     this.getCards();
-
     this._spinner;
   }
 
   public getCards() {
-    this._listService.getCards().subscribe((data: any) => {
+    this._listService.getCards().subscribe((data: ListModel) => {
       this.listCard = data.cards;
       this._spinner.hide()
     }, (error: any) => {
