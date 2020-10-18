@@ -9,12 +9,10 @@ import { CardsModule } from './cards/cards.module';
 import { ComponentsModule } from './components/components.module';
 import { SortPipe } from './pipes/sort.pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
-import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TestComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

@@ -19,7 +19,6 @@ describe('ListService', () => {
         expect(service.getCards).toBeTruthy();
     });
 
-    
     it('should have handleError function', () => {
         const service: ListService = TestBed.get(ListService);
         expect(service.handleError).toBeTruthy();
