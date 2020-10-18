@@ -2,7 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { ListComponent } from './list/list.component';
 import { ListService } from './list/services/list.service';
@@ -14,7 +14,7 @@ import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [ListComponent, ListComponent, SortPipe, DetailsComponent],
-  exports:[ListComponent],
+  exports: [ListComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -24,7 +24,7 @@ import { ComponentsModule } from '../components/components.module';
     NgxSpinnerModule,
     ComponentsModule
   ],
-  providers:[
+  providers: [
     ListService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

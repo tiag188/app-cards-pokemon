@@ -16,7 +16,7 @@ var ListComponent = /** @class */ (function () {
         this._spinner = _spinner;
         this.version = package_json_1.version;
         this.listCardFilter = { name: '' };
-        this.version = "10.1.5";
+        this.version = "10.1.4";
         this._spinner.show();
         this.getCards();
     }

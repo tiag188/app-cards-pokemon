@@ -15,11 +15,12 @@ export class ListComponent implements OnInit {
   version: string = version;
   listCardFilter: any = { name: '' };
   listCard: ListCardModel;
+  listCards: ListCardModel[];
   error: any;
   name: any;
 
   constructor(private _router: Router, private _listService: ListService, private _spinner: NgxSpinnerService) {
-    this.version = "10.1.5";
+    this.version = "10.1.4";
     this._spinner.show();
     this.getCards();
   }
@@ -49,6 +50,5 @@ export class ListComponent implements OnInit {
       }
     });
   }
-
 
 }
