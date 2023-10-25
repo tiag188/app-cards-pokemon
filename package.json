@@ -1,6 +1,9 @@
 {
   "name": "cards-pokemon-app",
   "version": "0.0.0",
+  "engines": {
+    "node": "14.21.3"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -30,6 +33,7 @@
     "ngx-pipes": "^2.7.5",
     "ngx-sortable": "^1.0.3",
     "ngx-spinner": "^10.0.1",
+    "node": "^14.21.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -38,9 +42,9 @@
     "@angular-devkit/build-angular": "~0.1001.4",
     "@angular/cli": "~10.1.4",
     "@angular/compiler-cli": "~10.1.4",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
